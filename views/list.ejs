@@ -1,0 +1,19 @@
+<%- include("header") -%>
+  <div class="box" id="heading">
+    <h1><%= listTitle %></h1>
+  </div>
+
+  <div class="box">
+
+    <% for(var i=0;i<newItems.length;i++) {%>
+    <div class="item">
+      <input type="checkbox">
+      <p><%= newItems[i] %></p>
+    </div>
+    <% } %>
+    <form action=<%= addRedirect %> method="post" class="item">
+      <input type="text" name="toDo" placeholder="New item">
+      <button type="submit" name="button">+</button>
+    </form>
+  </div>
+<%- include("footer") -%>
